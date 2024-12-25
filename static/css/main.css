@@ -37,9 +37,14 @@ header {
 	border-bottom: 1px solid var(--border-color);
 }
 
-header nav a {
-	margin: 0 15px;
+header nav {
+	display: flex;
+	column-gap: 16px;
 }
+
+/* header nav a {
+	margin: 0 15px;
+} */
 
 @media (max-width: 600px) {
 	header {
@@ -106,8 +111,9 @@ code {
 }
 
 .meta {
-	padding: 0 20px;
+	/* padding: 0 20px; */
 	color: #666;
+	font-style: italic;
 }
 
 .tag {
