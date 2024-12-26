@@ -70,6 +70,10 @@ header nav {
 	#subscribeForm input[name="email"] {
 		flex: 1;
 	}
+
+	input {
+		font-size: 16px;
+	}
 }
 
 footer {
