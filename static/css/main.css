@@ -32,24 +32,34 @@ body {
 
 header {
 	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
+	flex-direction: column;
 	border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+	margin-block-end: 0;
 }
 
 header nav {
 	display: flex;
+	justify-content: flex-end;
 	column-gap: 16px;
 }
 
-/* header nav a {
-	margin: 0 15px;
-} */
+#subscribe-container {
+	display: none;
+	justify-content: flex-end;
+	column-gap: 4px;
+	padding: 8px 0;
+}
 
 @media (max-width: 600px) {
 	header {
-		flex-direction: column;
 		align-items: flex-start;
+	}
+
+	header h1 {
+		margin-block-end: revert;
 	}
 
 	nav a {
