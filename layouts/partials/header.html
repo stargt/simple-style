@@ -19,13 +19,13 @@
     <a
       href="javascript:void(0);"
       id="subscribe-opener"
-      onclick="document.getElementById('subscribe-container').style.display='flex';document.getElementById('subscribe-opener').style.fontWeight='bold';setTimeout(() => document.getElementById('subscribe-email').focus(), 100)"
+      onclick="document.getElementById('subscribe-container').style.display='flex';document.getElementById('subscribe-opener').style.fontWeight='bold';document.getElementById('subscribe-email').focus()"
       >Subscribe</a
     >
     {{ partial "search.html" . }}
   </nav>
-  <div id="subscribe-container">
+  <form id="subscribe-container" onsubmit="alert('haha')">
     <input id="subscribe-email" type="email" placeholder="Type your Email" />
-    <button>Subscribe</button>
-  </div>
+    <input type="submit" value="Subscribe" />
+  </form>
 </header>
