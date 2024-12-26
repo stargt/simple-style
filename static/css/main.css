@@ -54,17 +54,21 @@ header nav {
 }
 
 @media (max-width: 600px) {
-	header {
-		align-items: flex-start;
-	}
-
 	header h1 {
 		margin-block-end: revert;
+	}
+
+	header nav {
+		justify-content: flex-start;
 	}
 
 	nav a {
 		margin-left: 0;
 		margin-top: 5px;
+	}
+
+	#subscribeForm input[name="email"] {
+		flex: 1;
 	}
 }
 
