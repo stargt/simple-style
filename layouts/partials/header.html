@@ -19,13 +19,51 @@
     <a
       href="javascript:void(0);"
       id="subscribe-opener"
-      onclick="document.getElementById('subscribe-container').style.display='flex';document.getElementById('subscribe-opener').style.fontWeight='bold';document.getElementById('subscribe-email').focus()"
+      onclick="openSubscribeForm()"
       >Subscribe</a
     >
     {{ partial "search.html" . }}
   </nav>
-  <form id="subscribe-container" onsubmit="alert('haha')">
-    <input id="subscribe-email" type="email" placeholder="Type your Email" />
+  <form id="subscribeForm">
+    <input name="email" type="email" placeholder="Type your Email" />
     <input type="submit" value="Subscribe" />
   </form>
 </header>
+
+<script>
+  function openSubscribeForm() {
+    subscribeForm.style.display = 'flex';
+    document.getElementById('subscribe-opener').style.fontWeight = 'bold';
+    subscribeForm.email.focus();
+  }
+
+  subscribeForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+    const email = form.email.value;
+
+    try {
+      const response = await fetch('/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok || true) {
+        alert(
+          `A confirmation email has been sent to [${email}]!\nPlease check your inbox.`
+        );
+        form.reset();
+        form.style.display = 'none';
+        document.getElementById('subscribe-opener').style.fontWeight = 'normal';
+      } else {
+        alert('Failed to subscribe. Please try again.');
+      }
+    } catch (error) {
+      alert('Failed to subscribe. Please try again.');
+    }
+  });
+</script>

@@ -46,7 +46,7 @@ header nav {
 	column-gap: 16px;
 }
 
-#subscribe-container {
+#subscribeForm {
 	display: none;
 	justify-content: flex-end;
 	column-gap: 4px;
