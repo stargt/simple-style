@@ -16,10 +16,7 @@
     {{- range .Site.Menus.main -}}
     <a href="{{ .URL }}">{{ .Name }}</a>
     {{- end -}}
-    <a
-      href="javascript:void(0);"
-      id="subscribe-opener"
-      onclick="openSubscribeForm()"
+    <a href="https://e145df3c.sibforms.com/serve/MUIFANXaX4wxIDS1YZB7ZoGOZl2sg-as3PnStAcIDSd7Nmpb0xnlAsM77FAXGwTutGGEC_tOnNIgYQ13bZOeTVO1uPdr9Jhu0zQVwXJfjsUXRzDxQldrK36JGAm3Gp2ufg3E9msVxcjju2rKoNrVEbSU5BV5UZDGSrHA-SoHkxX1BI7lzZzaFw7Dr1PWENaKi06O9QOtqjxj17lH" target="_blank" rel="noopener noreferrer"
       >Subscribe</a
     >
     {{ partial "search.html" . }}
@@ -29,41 +26,3 @@
     <input type="submit" value="Subscribe" />
   </form>
 </header>
-
-<script>
-  function openSubscribeForm() {
-    subscribeForm.style.display = 'flex';
-    document.getElementById('subscribe-opener').style.fontWeight = 'bold';
-    subscribeForm.email.focus();
-  }
-
-  subscribeForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-
-    const form = event.target;
-    const email = form.email.value;
-
-    try {
-      const response = await fetch('/subscribe', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      if (response.ok || true) {
-        alert(
-          `A confirmation email has been sent to [${email}]!\nPlease check your inbox.`
-        );
-        form.reset();
-        form.style.display = 'none';
-        document.getElementById('subscribe-opener').style.fontWeight = 'normal';
-      } else {
-        alert('Failed to subscribe. Please try again.');
-      }
-    } catch (error) {
-      alert('Failed to subscribe. Please try again.');
-    }
-  });
-</script>
