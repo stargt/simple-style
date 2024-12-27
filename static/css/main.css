@@ -15,6 +15,9 @@ body {
 	line-height: 1.5;
 	color: var(--text-color);
 	background-color: var(--background-color);
+	word-break: keep-all;
+  overflow-wrap: anywhere;
+	hyphens: auto;
 }
 
 @media (min-width: 768px) {
@@ -24,11 +27,12 @@ body {
 	}
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
 	body {
 		max-width: 970px;
+		font-size: 1.32rem;
 	}
-}
+} */
 
 header {
 	display: flex;
@@ -83,14 +87,14 @@ footer {
 	margin-top: 20px;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
 	color: var(--primary-color);
-}
+} */
 
 a {
 	color: var(--primary-color);

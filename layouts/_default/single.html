@@ -7,7 +7,7 @@
     {{ end -}}
   </div>
   {{ if .Date -}}
-  <div class="meta">Published at {{ .Date.Format (.Site.Params.dateFormat | default "2006-01-02 15:04") }} UTC</div>
+  <div class="meta">{{ .Date.Format (.Site.Params.dateFormat | default "Jan 06, 2006") }}</div>
   {{ end -}}
   {{ $taxo := "tags" -}}
   {{ if .Param $taxo -}}
