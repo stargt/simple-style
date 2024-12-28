@@ -16,13 +16,46 @@
     {{- range .Site.Menus.main -}}
     <a href="{{ .URL }}">{{ .Name }}</a>
     {{- end -}}
-    <a href="https://e145df3c.sibforms.com/serve/MUIFANXaX4wxIDS1YZB7ZoGOZl2sg-as3PnStAcIDSd7Nmpb0xnlAsM77FAXGwTutGGEC_tOnNIgYQ13bZOeTVO1uPdr9Jhu0zQVwXJfjsUXRzDxQldrK36JGAm3Gp2ufg3E9msVxcjju2rKoNrVEbSU5BV5UZDGSrHA-SoHkxX1BI7lzZzaFw7Dr1PWENaKi06O9QOtqjxj17lH" target="_blank" rel="noopener noreferrer"
+    <a
+      href="https://e145df3c.sibforms.com/serve/MUIFANXaX4wxIDS1YZB7ZoGOZl2sg-as3PnStAcIDSd7Nmpb0xnlAsM77FAXGwTutGGEC_tOnNIgYQ13bZOeTVO1uPdr9Jhu0zQVwXJfjsUXRzDxQldrK36JGAm3Gp2ufg3E9msVxcjju2rKoNrVEbSU5BV5UZDGSrHA-SoHkxX1BI7lzZzaFw7Dr1PWENaKi06O9QOtqjxj17lH"
+      target="_blank"
+      rel="noopener noreferrer"
       >Subscribe</a
     >
     {{ partial "search.html" . }}
   </nav>
-  <form id="subscribeForm">
-    <input name="email" type="email" placeholder="Type your Email" />
-    <input type="submit" value="Subscribe" />
-  </form>
 </header>
+<div id="language-option-container">
+  <a href="#">English</a> | <a>Korean</a> | <a>Spanish</a> | <a>German</a> |
+  <a>Japanese</a> | <a>French</a> |
+  <select>
+    <option selected>Other Languages</option>
+    <option>----</option>
+    <option value="AR">Arabic</option>
+    <option value="BG">Bulgarian</option>
+    <option value="CS">Czech</option>
+    <option value="DA">Danish</option>
+    <option value="EL">Greek</option>
+    <option value="ET">Estonian</option>
+    <option value="FI">Finnish</option>
+    <option value="HU">Hungarian</option>
+    <option value="ID">Indonesian</option>
+    <option value="IT">Italian</option>
+    <option value="LT">Lithuanian</option>
+    <option value="LV">Latvian</option>
+    <option value="NB">Norwegian Bokmål</option>
+    <option value="NL">Dutch</option>
+    <option value="PL">Polish</option>
+    <option value="PT-PT">Portuguese</option>
+    <option value="PT-BR">Portuguese (Brazilian)</option>
+    <option value="RO">Romanian</option>
+    <option value="RU">Russian</option>
+    <option value="SK">Slovak</option>
+    <option value="SL">Slovenian</option>
+    <option value="SV">Swedish</option>
+    <option value="TR">Turkish</option>
+    <option value="UK">Ukrainian</option>
+    <option value="ZH-HANS">Chinese (simplified)</option>
+    <option value="ZH-HANT">Chinese (traditional)</option>
+  </select>
+</div>
