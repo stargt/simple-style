@@ -51,6 +51,7 @@ header nav {
 }
 
 #language-option-container {
+	display: block;
 	margin-block-end: 2em;
 	font-size: 12px;
 }
@@ -64,6 +65,12 @@ header nav {
 	cursor: pointer;
 	outline: none;
 	font-size: 12px;
+}
+
+#mobile-language-option-select {
+	display: none;
+	align-self: flex-end; margin-left: auto;
+	margin-block-end: 2px;
 }
 
 #language-option-container select option {
@@ -91,6 +98,14 @@ header nav {
 
 	input {
 		font-size: 16px;
+	}
+
+	#language-option-container {
+		display: none;
+	}
+
+	#mobile-language-option-select {
+		display: block;
 	}
 }
 
