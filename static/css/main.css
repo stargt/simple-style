@@ -186,6 +186,15 @@ article h1 {
 	margin-block-end: 0.67em;
 }
 
+article h1 a,
+article h2 a,
+article h3 a,
+article h4 a,
+article h5 a,
+article h6 a {
+	color: inherit;
+}
+
 .article-list li .article-date {
 	display: inline-block;
 	margin-right: 10px;
